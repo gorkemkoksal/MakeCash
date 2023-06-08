@@ -27,30 +27,30 @@ public class GameManager : MonoBehaviour
         switch (State)
         {
             case GameState.MakingMoney:
-                HandleMakingMoney();
+                //  HandleMakingMoney();
                 break;
             case GameState.Shop:
-                HandleShop();
+                //  HandleShop();
                 break;
             case (GameState.Popup):
-                HandlePopup();
+                //  HandlePopup();
                 break;
         }
         onAnyStateChanged?.Invoke(newState);
     }
-    private void HandleMakingMoney()
-    {
-        throw new NotImplementedException();
-    }
+    //private void HandleMakingMoney()
+    //{
+    //    throw new NotImplementedException();
+    //}
 
-    private void HandleShop()
-    {
-        throw new NotImplementedException();
-    }
+    //private void HandleShop()
+    //{
+    //    throw new NotImplementedException();
+    //}
 
-    private void HandlePopup()
-    {
-        throw new NotImplementedException();
-    }
+    //private void HandlePopup()
+    //{
+    //    throw new NotImplementedException();
+    //}
 
 }
