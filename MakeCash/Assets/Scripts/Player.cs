@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
-
+    [Header("Burning Slider")]
     [SerializeField] private float freezeDuration = 10f;
     [SerializeField] private float freezeBurningAmount = 0.1f;
     [SerializeField] private float gpuBurningSpeed = 0.15f;
@@ -14,6 +14,12 @@ public class Player : MonoBehaviour
     private float burnDegree;
     private bool isFreezed;
     private float freezeCounter;
+    [Header("GamePlay Values")]
+    [SerializeField] private float incomeSpeedMultiplier;
+
+
+
+
 
     List<Pipe> pipes = new List<Pipe>();
     private void Awake()
@@ -46,7 +52,6 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
-    // public void SetIsTouched(bool isTouched) => this.isTouched = isTouched;
     public void FreezingGpu()
     {
         isFreezed = true;
